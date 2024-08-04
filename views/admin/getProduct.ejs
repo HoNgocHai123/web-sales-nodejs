@@ -1,0 +1,60 @@
+<h3 class="user-account-title">Sản phẩm</h3>
+  <div><br>
+    
+    <a href="/product" class="btn btn-success" style="color: black; text-decoration: none;">Thêm Sản Phẩm</a>
+  </div><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">name</th>
+        <th scope="col">Image</th>
+        <th scope="col">Price</th>
+        <th scope="col">Desciption</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.products.forEach(element => { %>
+      <tr>
+        <th scope="row"><%= element.id %></th>
+
+        <td><%= element.username %></td>
+
+        <td>
+          <img
+            style="width: 100px; height: 100px; object-fit: cover"
+            src="<%= element.image %>"
+            alt=""
+          />
+
+        </td>
+        <td><%= element.price %></td>
+        <td><%= element.description %></td>
+      
+      <td><form  action="/deleteproduct" method="POST">
+        <input type="hidden" name="id" value="<%=element.id%>">
+        <button type="submit" class="btn btn-danger">delete</button>
+        <a href="/geteditproduct/<%= element.id %>" class="btn btn-primary">Edit</a>
+      </form></td>
+      <td>
+        
+      </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <style>
+    .user-account-title {
+    color: #2c3e50; /* Màu chữ */
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    text-align: center; /* Căn giữa */
+    padding: 10px 0; /* Thêm padding trên và dưới */
+    background-color: #ecf0f1; /* Màu nền */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng đổ */
+    margin: 20px; /* Khoảng cách với các thành phần khác */
+}
+
+  </style>
+  

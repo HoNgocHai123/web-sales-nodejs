@@ -1,0 +1,71 @@
+  <section class="header">
+  <div class="container p-3">
+      <div class="row">
+          <div class="col-md-2">
+             <img src="https://1.bp.blogspot.com/-1JPaVHUJnGU/YOQeX2ylZII/AAAAAAAAFa0/2jJttGEW6f0fqL8KEAc6HLWFf3m0JILzACLcBGAsYHQ/logo.png" class="rounded img-fluid" alt="">
+          </div>
+          <div class="col-md-4">
+            <form class="example" action="/search" method="GET">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+          <div style="margin-left: 100px;" class="col-md-3">
+              <div class="row">
+                  <div class="col">
+                     <div class="row">
+                      <div class="col-3 fs-3 text-danger">
+                          <i class="fa-solid fa-phone"></i>
+                      </div>
+                      <div  class="col-9">
+                          Tư vấn<br>
+                         <strong class="text-danger">1900 1189</strong>
+                      </div>
+                     </div>          
+                  </div>
+                  <div class="col">
+                      <div class="row">
+                          <div class="col-3 fs-3 text-danger">
+                                    <i class="fa-solid fa-phone"></i>
+                          </div>
+                          <div class="col-9">Bảo Hành<br>
+                                    <strong class="text-danger">1900 1189</strong>
+                          </div>
+                         </div>          
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-2 fs-3">
+                  <i class="fa-regular fa-user"></i> <span class="badge bg-danger">4</span>
+          </div>
+          </div>     
+      </div>
+  </div>
+<div class="navbar">
+  <a href="/get-productUser">Nodejs</a>
+  <div class="">
+    <a href="/">Trang chủ</a>
+    <a href="/getnewproduct">Sản Phẩm</a>
+    <a href="">Giới thiệu</a>
+    <a href="">Liên Hệ</a>
+    <a style="margin-right: 600px;" href="">Góp ý</a>
+    <% if (locals.user) { %>
+      <a href="/"><%= locals.user.username %></a>
+      
+      <a  href="/logout">Logout</a>
+    <% } else { %>
+      <a class="login-button" href="/signin">Login</a>
+      <a class="register-button" href="/signup">Register</a>
+
+
+    <% } %>
+  </div>
+</div>
+
+<!-- Phần Nội dung -->
+<div class="content">
+  <!-- Nội dung trang web của bạn -->
+</div>
+
+<!-- Phần Footer -->
+

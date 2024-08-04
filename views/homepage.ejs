@@ -1,0 +1,71 @@
+
+<section class="banner">
+        <div class="container" >
+            <!-- Carousel -->
+           
+            <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
+        <!-- Indicators/dots -->
+
+        <div class="carousel-indicators">
+          <button  data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button  data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button  data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/oppo-pad-air-en/topbanner/oppo-pad-air-2880x1440.jpg.thumb.webp" alt="" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno8-t-en/topbanner/reno8-t_2880_1440_2.jpg.thumb.webp" alt="" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+         <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/a77s-en/topbanner/a77s-blue-2880_1440-v2.jpg.thumb.webp" alt="" class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      
+        </div>  
+        <div class="chu" style="position: absolute; margin-top: -400px;margin-left: 350px;">
+           <h1 class="conty">CÔNG TY TNHH  VÀ KỸ THUẬT OPPO</h1><br>
+           <p class="shop" style="">Shop hân hạnh chào đoán</p>
+        </div>
+        <button style="" class="btn btn-outline-primary abc">xem thêm</button>
+    </section>
+    
+    <section class="product">
+<div class="container mt-3">
+  <div class="p-3 text-center">
+    <h1>Sản phẩm của chúng tôi</h1><br>
+  </div>
+     
+    <div class="row" style="margin-left: 40px;">
+      <% data.products.forEach(element => { %>
+        <div class="col-md-3 mb-4">
+            <div <%= element.id %> class="card tong" style="width:250px;object-fit: cover;">
+                <a href="/getproductDetail/<%= element.id %>"><img  class="card-img-top product" src="<%= element.image %>" alt="Card image" style="height: 180px; width: 140px; margin-left: 50px;"></a>
+                <div class="card-body">
+                  <h4><%= element.username %></h4>
+                  <p style="color: red;"><b><%= element.price %></b></p>
+                  <a href="#" class="btn btn-primary">Mua</a>
+                </div>
+              </div>
+        </div>
+        <% }) %>    
+    </div>
+</div>
+
+    </section><br>
+
+    
+
+   
+    
+
+    <!-- footer -->
+    

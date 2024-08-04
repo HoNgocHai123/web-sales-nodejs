@@ -1,0 +1,48 @@
+<h3 class="user-account-title">Tài khoản người dùng</h3>
+
+  <table class="table">
+    <thead>
+      
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">UserName</th>
+        <th scope="col">email</th>
+        <th scope="col">phone</th>
+        <th scope="col">password</th>
+        <th scope="col">address</th>
+        <th scope="col">date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% data.users.forEach(element => { %>
+      <tr>
+        <th scope="row"><%= element.id %></th>
+        <td><%= element.username %></td>
+        <td><%= element.email %></td>
+        <td><%= element.phone %></td>
+        <td><%= element.password %></td>
+        
+      
+      <td><%= element.address %></td>
+      <td>
+        
+      </td>
+      </tr>
+      
+    </tbody>
+    <% }) %>
+  </table>
+  <style>
+    .user-account-title {
+    color: #2c3e50; /* Màu chữ */
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    text-align: center; /* Căn giữa */
+    padding: 10px 0; /* Thêm padding trên và dưới */
+    background-color: #ecf0f1; /* Màu nền */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng đổ */
+    margin: 20px; /* Khoảng cách với các thành phần khác */
+}
+
+  </style>
+  

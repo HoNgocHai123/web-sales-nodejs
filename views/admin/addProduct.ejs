@@ -1,0 +1,60 @@
+<form class="w-75 mx-auto mt-5" method="POST" action="/addproduct" enctype="multipart/form-data">
+  <h2>Add Product</h2>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Name</label>
+    <input
+    style="width: 80%;"
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      name="username"
+    />
+  </div>
+  <div style='margin-top: 10px;' class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Category</label><br>
+    <select
+    style="width: 80%;height: 35px;border: 1px solid #ccc;"
+      class="form-select"
+      aria-label="Default select example"
+      name="category"
+    >
+      <% data.category.forEach(element => { %>
+      <option value="<%= element.id %>"><%= element.username   %></option>
+      <% }) %>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Price</label>
+    <input
+    style="width: 80%;"
+
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      name="price"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Image</label>
+    <input type="file" name="image" />
+  </div><br>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label"
+      >Description</label>
+      
+    <textarea
+    style="width: 80%;"
+
+      class="form-control"
+      id="exampleFormControlTextarea1"
+      rows="3"
+      name="description"
+    ></textarea>
+  </div>
+  <button style="margin-top: 10px;width: full;" type="submit" class="btn btn-primary">Submit</button>
+  <button style="margin-top: 10px; width: 8%; background-color: #28a745; border-color: #28a745;" type="button" class="btn btn-primary">
+    <a href="/getproduct" style="text-decoration: none; color: white;">Danh Sách</a>
+</button>
+
+  
+</form>

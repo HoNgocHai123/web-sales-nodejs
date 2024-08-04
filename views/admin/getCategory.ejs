@@ -1,0 +1,48 @@
+<h3 class="user-account-title">Danh mục</h3>
+<div><br>
+  <a href="/category" class="btn btn-success" style="color: black; text-decoration: none;">Thêm Danh mục</a>
+
+  </div><br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">name</th>      
+      </tr>
+    </thead>
+    <tbody>
+      <% data.category.forEach(element => { %>
+      <tr>
+        <th scope="row"><%= element.id %></th>
+        <td><%= element.username %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      
+        <td><%= element.category %></td>
+      <td><form action="/deletecategory" method="POST">
+        <input type="hidden" name="id" value="<%=element.id%>">
+        <button type="submit" class="btn btn-danger">delete</button>
+        <a href="/geteditcategory/<%= element.id %>" class="btn btn-primary">Edit</a>
+      </form>
+    </td>
+      <td>
+        
+      </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <style>
+      .user-account-title {
+    color: #2c3e50; /* Màu chữ */
+    font-family: 'Arial', sans-serif; /* Font chữ */
+    text-align: center; /* Căn giữa */
+    padding: 10px 0; /* Thêm padding trên và dưới */
+    background-color: #ecf0f1; /* Màu nền */
+    border-radius: 8px; /* Bo góc */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng đổ */
+    margin: 20px; /* Khoảng cách với các thành phần khác */
+}
+  </style>
+  
